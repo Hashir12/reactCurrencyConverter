@@ -21,7 +21,6 @@ function App() {
     }
 
     const convert = () => {
-        console.log(amount, convertedAmount)
         setConvertedAmount(amount * currencyInfo[to])
     }
 
