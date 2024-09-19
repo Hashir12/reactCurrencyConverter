@@ -21,6 +21,7 @@ function App() {
     }
 
     const convert = () => {
+        console.log(amount, convertedAmount)
         setConvertedAmount(amount * currencyInfo[to])
     }
 
@@ -58,7 +59,7 @@ function App() {
                         </div>
                         <div className="w-full mt-1 mb-4">
                             <InputBox label="To"
-                                      amount={convertedAmount}
+                                      amount={Math.ceil(convertedAmount)}
                                       currencyOptions={options}
                                       onCurrencyChange={(currency) => setTo(currency)}
                                       selectCurrency={to}
